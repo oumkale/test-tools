@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jmeter_load_test
+  name: jmeterloadtest
   labels:
-    app: jmeter_load_test
-    name: jmeter_load_test
+    app: jmeterloadtest
+    name: jmeterloadtest
   namespace: sock-shop
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: jmeter_load_test
+      app: jmeterloadtest
   template:
     metadata:
       labels:
-        app: jmeter_load_test
-        name: jmeter_load_test
+        app: jmeterloadtest
+        name: jmeterloadtest
     spec:
       containers:
-      - name: jmeter_load_test
+      - name: jmeterloadtest
         image: hamsadharishani/jmeter:latest
